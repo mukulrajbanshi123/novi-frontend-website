@@ -1,20 +1,19 @@
+import { Button, SectionHeader } from '@/components/common';
 import { CircleX } from 'lucide-react';
-import Button from '../common/Button';
 
 const TRUSTED_BY = ['Pulse', 'Aether', 'Holo', 'Kroma', 'Mira'];
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <section className="flex w-full container mx-auto flex-col items-center gap-10 px-4 pb-12 pt-16 sm:px-6 sm:pt-24 lg:px-16">
-      <div className="flex flex-col items-center gap-6 text-center md:max-w-2xl lg:max-w-4xl">
-        <h1 className="text-4xl font-extrabold leading-[1.1] text-text-primary sm:text-5xl lg:text-[56px]">
-          Run your team without the tab switching
-        </h1>
-        <p className="text-lg text-text-secondary sm:text-xl">
-          Novi brings tasks, docs, and conversations into one calm workspace built for small,
-          fast-moving teams.
-        </p>
-      </div>
+      <SectionHeader
+        as="h1"
+        title="Run your team without the tab switching"
+        description="Novi brings tasks, docs, and conversations into one calm workspace built for small, fast-moving teams."
+        className="gap-6 md:max-w-2xl lg:max-w-4xl"
+        titleClassName="text-4xl sm:text-5xl lg:text-[56px]"
+        descriptionClassName="text-lg sm:text-xl"
+      />
 
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:justify-center">
         <Button size="lg">Start Free</Button>
@@ -39,5 +38,3 @@ const Hero = () => {
     </section>
   );
 };
-
-export default Hero;

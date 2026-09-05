@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border-stroke backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border-stroke bg-white/50 backdrop-blur">
       <div className="flex h-20 container  mx-auto items-center justify-between px-4 sm:px-6 lg:px-16">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
           <div className="size-7">
@@ -29,9 +29,11 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.href}
-              className="text-[15px] font-medium text-text-secondary transition-colors hover:text-primary"
+              className="group relative text-[15px] font-medium text-text-secondary transition-colors hover:text-primary"
             >
               {item.name}
+
+              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full" />
             </Link>
           ))}
         </nav>
