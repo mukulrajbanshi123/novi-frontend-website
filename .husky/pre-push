@@ -2,7 +2,7 @@ echo "🚀 Running checks before push..."
 
 pnpm lint || exit 1
 
-pnpm type-check || exit 1
+pnpm typecheck || exit 1
 
 pnpm build || exit 1
 
