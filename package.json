@@ -9,6 +9,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
     "lint": "eslint",
+    "format:check": "prettier . --check",
+    "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
   "lint-staged": {
