@@ -6,8 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
     "lint": "eslint",
     "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,scss,md,mdx,yml,yaml,html}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "lucide-react": "^1.41.0",
