@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Novi
 
-## Getting Started
+Task managment tool for small, fast moving teams such as
+startups, agencies, and product or design teams.
 
-First, run the development server:
+## Live Preview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://novi-frontend-website.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Motion
+- Lucide React
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- Responsive landing page
+- Animated hero section
+- Interactive feature cards
+- Responsive navigation
+- Smooth hover interactions
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Show your feature-based structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+├── app/
+│ ├── globals.css
+│ ├── layout.tsx
+│ └── page.tsx
+│
+├── assets/
+│ ├── icons/
+│ │ ├── socialMediaIcons/
+│ │ │ ├── Facebook.tsx
+│ │ │ ├── Instagram.tsx
+│ │ │ ├── Linkedin.tsx
+│ │ │ └── XIcon.tsx
+│ │ └── index.tsx
+│
+├── components/
+│ ├── common/
+│ │ ├── Button/
+│ │ ├── SectionHeader/
+│ │ └── index.tsx
+│ │
+│ └── layout/
+│ ├── Header/
+│ └── Footer.tsx
+│
+├── features/
+│ ├── home/
+│ │ ├── animations/
+│ │ ├── components/
+│ │ └── constants/
+│ │
+│ ├── pricing/
+│ ├── product/
+│ └── resources/
+│
+├── public/
+│
+├── styles/
+│ └── design-token.css
+│
+├── types/
+│
+├── package.json
+├── pnpm-lock.yaml
+└── README.md
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Intruction to run
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository
+2. Install dependencies:
+   pnpm install
+
+3. Start the development server:
+   pnpm dev
+
+4. Open http://localhost:3000
