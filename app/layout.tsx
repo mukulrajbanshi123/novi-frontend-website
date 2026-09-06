@@ -26,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${figtree.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col overflow-x-hidden ">
+    <html lang="en" className={`${figtree.variable} antialiased`}>
+      <body className="min-h-dvh overflow-x-hidden">
         <Header />
         <main>{children}</main>
         <Footer />

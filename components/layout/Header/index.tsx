@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
-import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import { useState } from 'react';
 
-import Image from 'next/image';
-import Logo from '@/public/Novi.svg';
 import { NAVITEMS } from '@/components/layout/Header/NavItems';
+import Logo from '@/public/Novi.svg';
+import { AnimatePresence, motion } from 'motion/react';
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,14 +40,14 @@ const Header = () => {
         </nav>
         <div className="hidden items-center gap-6 lg:gap-4 md:flex">
           <Link
-            href="/login"
+            href="/#"
             className="rounded-lg px-4 py-2 text-[15px] font-semibold text-text-primary transition hover:bg-gray-100"
           >
             Sign In
           </Link>
 
           <Link
-            href="/contact"
+            href="/#"
             className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-hover"
           >
             Start Free
@@ -82,74 +83,105 @@ const Header = () => {
         `}
       />
 
-      <aside
-        className={`
-          fixed right-0 top-0 z-50
-          h-dvh md:w-70 w-full
-          bg-white shadow-2xl
-          transition-transform duration-300 ease-in-out
-          lg:hidden
-          ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-        `}
-      >
-        <div className="flex h-20 items-center justify-between border-b border-gray-100 px-5">
-          <span className="text-lg font-bold">Menu</span>
-
-          <button
-            type="button"
-            aria-label="Close menu"
-            onClick={closeMenu}
-            className="rounded-lg p-2 transition hover:bg-gray-100"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.aside
+            key="mobile-menu"
+            aria-hidden={!isOpen}
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{
+              duration: 0.3,
+              ease: 'easeInOut',
+            }}
+            className="
+        fixed right-0 top-0 z-50
+        h-dvh w-full md:w-70
+        bg-white shadow-2xl
+        lg:hidden
+      "
           >
-            <X size={22} />
-          </button>
-        </div>
+            <div className="flex h-20 items-center justify-between border-b border-gray-100 px-5">
+              <span className="text-lg font-bold">Menu</span>
 
-        <nav className="flex flex-col px-4 py-6">
-          {NAVITEMS.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              onClick={closeMenu}
-              className="
-                rounded-lg px-4 py-3
+              <button
+                type="button"
+                aria-label="Close menu"
+                onClick={closeMenu}
+                className="rounded-lg p-2 transition hover:bg-gray-100"
+              >
+                <X size={22} />
+              </button>
+            </div>
+
+            <nav className="flex flex-col px-4 py-6">
+              {NAVITEMS.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    delay: 0.1 + index * 0.1,
+                    duration: 0.25,
+                    ease: 'easeOut',
+                  }}
+                >
+                  <Link
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="
+                block rounded-lg px-4 py-3
                 text-sm font-medium text-text-secondary
                 transition-all duration-200
                 hover:bg-primary hover:text-white
               "
-            >
-              {item.name}
-            </Link>
-          ))}
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
+              ))}
 
-          <div className="mt-6 flex flex-col gap-3 border-t border-gray-100 pt-6">
-            <Link
-              href="/login"
-              onClick={closeMenu}
-              className="
-                rounded-lg border border-border-stroke
-                px-4 py-2 text-center
-                text-sm font-semibold
-                transition hover:bg-gray-50
-              "
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/contact"
-              onClick={closeMenu}
-              className="
-                rounded-lg bg-primary
-                px-4 py-2 text-center
-                text-sm font-semibold text-white
-                transition hover:bg-primary-hover
-              "
-            >
-              Start Free
-            </Link>
-          </div>
-        </nav>
-      </aside>
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.25,
+                  duration: 0.3,
+                  ease: 'easeOut',
+                }}
+                className="mt-6 flex w-full gap-4 border-t border-gray-100 pt-6"
+              >
+                <Link
+                  href="/#"
+                  onClick={closeMenu}
+                  className="
+              w-full rounded-lg border border-border-stroke
+              px-4 py-2 text-center
+              text-sm font-semibold
+              transition hover:bg-gray-50
+            "
+                >
+                  Sign In
+                </Link>
+
+                <Link
+                  href="/#"
+                  onClick={closeMenu}
+                  className="
+              w-full rounded-lg bg-primary
+              px-4 py-2 text-center
+              text-sm font-semibold text-white
+              transition hover:bg-primary-hover
+            "
+                >
+                  Start Free
+                </Link>
+              </motion.div>
+            </nav>
+          </motion.aside>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

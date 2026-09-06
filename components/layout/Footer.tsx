@@ -16,7 +16,7 @@ const SOCIALS = [
 
 const Footer = () => {
   return (
-    <footer className="flex w-full flex-col items-center border-t border-border-stroke bg-[#f5f3ef]">
+    <footer className="flex w-full flex-col items-center border-t border-border-stroke bg-surface-muted">
       <div className="flex w-full container mx-auto flex-col gap-16 px-4 pb-10 pt-20 sm:px-6 lg:px-16">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           <div className="flex w-full flex-col gap-6 lg:max-w-sm">
@@ -35,7 +35,7 @@ const Footer = () => {
               <p className="text-[13px] font-semibold text-text-primary">
                 Stay updated with our changelog
               </p>
-              <div className="flex w-full gap-2">
+              <div className="flex w-full max-w-md gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"

@@ -2,7 +2,7 @@ import { MessageSquareQuote } from 'lucide-react';
 
 export const Testimonial = () => {
   return (
-    <section className="flex w-full flex-col items-center bg-[#f5f3ef] py-16 sm:py-24">
+    <section className="flex w-full flex-col items-center bg-surface-muted py-16 sm:py-24">
       <div className="flex max-w-2xl flex-col items-center gap-8 px-4 text-center sm:px-6">
         <MessageSquareQuote size={32} className="text-text-primary" />
         <p className="text-xl font-semibold leading-snug text-text-primary sm:text-2xl">

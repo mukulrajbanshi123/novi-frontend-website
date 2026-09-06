@@ -3,9 +3,13 @@
   --color-primary-hover: #4338ca;
   --color-primary-dark: #3730a3;
   --color-primary-light: #eef2ff;
-  --color-background: #faf9f6;
+  --cloud: oklch(0.9842 0.0035 248.2);
+  --mist: oklch(0.9419 0.0134 262.4);
+  --ink: oklch(0.212 0.0397 265.8);
+  --cobalt: oklch(0.5106 0.2301 277);
+  --color-background: var(--cloud);
   --color-surface: #ffffff;
-  --color-surface-muted: #f5f5f4;
+  --color-surface-muted: var(--mist);
   --color-foreground: #171717;
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
@@ -20,6 +24,10 @@
 }
 
 @theme inline {
+  --color-cloud: var(--cloud);
+  --color-mist: var(--mist);
+  --color-ink: var(--ink);
+  --color-cobalt: var(--cobalt);
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
   --color-primary-dark: var(--color-primary-dark);
@@ -37,5 +45,6 @@
   --color-warning: var(--color-warning);
   --color-error: var(--color-error);
   --color-info: var(--color-info);
+
   --font-figtree: var(--font-text-figtree);
 }

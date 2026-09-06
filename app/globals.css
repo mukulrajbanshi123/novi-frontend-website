@@ -10,3 +10,18 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes glass-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(20px, -20px, 0) scale(1.05);
+  }
+}
+
+.animate-glass-drift {
+  animation: glass-drift 8s ease-in-out infinite;
+}
