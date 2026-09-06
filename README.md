@@ -28,53 +28,6 @@ https://novi-frontend-website.vercel.app/
 
 Show your feature-based structure
 
-## Project Structure
-
-├── app/
-│ ├── globals.css
-│ ├── layout.tsx
-│ └── page.tsx
-│
-├── assets/
-│ ├── icons/
-│ │ ├── socialMediaIcons/
-│ │ │ ├── Facebook.tsx
-│ │ │ ├── Instagram.tsx
-│ │ │ ├── Linkedin.tsx
-│ │ │ └── XIcon.tsx
-│ │ └── index.tsx
-│
-├── components/
-│ ├── common/
-│ │ ├── Button/
-│ │ ├── SectionHeader/
-│ │ └── index.tsx
-│ │
-│ └── layout/
-│ ├── Header/
-│ └── Footer.tsx
-│
-├── features/
-│ ├── home/
-│ │ ├── animations/
-│ │ ├── components/
-│ │ └── constants/
-│ │
-│ ├── pricing/
-│ ├── product/
-│ └── resources/
-│
-├── public/
-│
-├── styles/
-│ └── design-token.css
-│
-├── types/
-│
-├── package.json
-├── pnpm-lock.yaml
-└── README.md
-
 ## Getting Started
 
 ### Prerequisites
@@ -87,7 +40,7 @@ Show your feature-based structure
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/novi-frontend.git
+git clone https://github.com/mukulrajbanshi123/novi-frontend-website.git
 
 cd novi-frontend
 
