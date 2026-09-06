@@ -75,13 +75,25 @@ Show your feature-based structure
 ├── pnpm-lock.yaml
 └── README.md
 
-## Intruction to run
+## Getting Started
 
-1. Clone the repository
-2. Install dependencies:
-   pnpm install
+### Prerequisites
 
-3. Start the development server:
-   pnpm dev
+- Node.js 20+
+- pnpm
 
-4. Open http://localhost:3000
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/novi-frontend.git
+
+cd novi-frontend
+
+pnpm install
+
+pnpm dev
+```
+
+Open http://localhost:3000
