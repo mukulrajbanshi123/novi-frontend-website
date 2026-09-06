@@ -28,6 +28,55 @@ https://novi-frontend-website.vercel.app/
 
 Show your feature-based structure
 
+## Project Structure
+
+```bash
+├── app/
+│ ├── globals.css
+│ ├── layout.tsx
+│ └── page.tsx
+│
+├── assets/
+│ ├── icons/
+│ │ ├── socialMediaIcons/
+│ │ │ ├── Facebook.tsx
+│ │ │ ├── Instagram.tsx
+│ │ │ ├── Linkedin.tsx
+│ │ │ └── XIcon.tsx
+│ │ └── index.tsx
+│
+├── components/
+│ ├── common/
+│ │ ├── Button/
+│ │ ├── SectionHeader/
+│ │ └── index.tsx
+│ │
+│ └── layout/
+│ ├── Header/
+│ └── Footer.tsx
+│
+├── features/
+│ ├── home/
+│ │ ├── animations/
+│ │ ├── components/
+│ │ └── constants/
+│ │
+│ ├── pricing/
+│ ├── product/
+│ └── resources/
+│
+├── public/
+│
+├── styles/
+│ └── design-token.css
+│
+├── types/
+│
+├── package.json
+├── pnpm-lock.yaml
+└── README.md
+```
+
 ## Getting Started
 
 ### Prerequisites
